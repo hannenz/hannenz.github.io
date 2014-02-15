@@ -1,0 +1,22 @@
+/**
+ * _settings.scss
+ * 
+ * Settings file for hannenz.de
+ *
+ * @author Johannes Braun <j.braun@agentur-halma.de>
+ * @package hannenz
+ * @version 2014-02
+ */
+
+/* Colors */
+
+$blue:#343536;
+$lighterBlue:#4E6578;
+$orange:#F19300;
+$textColor:#454647;
+$textColor:shade(#454647, 5%);
+$lightTextColor:#abacad;
+
+$max-width:50em;
+
+$bp-small:new-breakpoint(max-width 38em 4);

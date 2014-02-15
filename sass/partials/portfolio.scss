@@ -1,0 +1,100 @@
+
+$vpWidth:400px;
+$vpHeight:$vpWidth * 0.75;
+.viewport {
+	width:$vpWidth;
+	height:$vpHeight;
+	margin:0 auto;
+	position:relative;
+			-webkit-perspective:400px;
+			perspective:400px;
+			-webkit-perspective-origin:50% 50%;
+			perspective-origin:50% 50%;
+
+
+
+	/* Super affiger Mac-Look */
+/* 	width:$vpWidth + 20px;
+	height:$vpHeight + 30px;
+	border:10px solid #ccc;
+	border-radius:10px;
+	border-bottom-width:20px;
+	@include linear-gradient($blue, #000);
+ */
+
+}
+
+.js .slides {
+	height:100%;
+	width:99999em;
+	overflow:visible;
+
+	@include transition(all 0.4s ease);
+	@include transform(translate3d(0, 0, 0));
+
+
+
+	figure {
+		margin:0;
+		float:left;
+		height:100%;
+		width:$vpWidth;
+		max-width:100%;
+		position:relative;
+		img {
+			height:auto;
+			width:100%;
+			@include transform(scale(0.5));
+			@include transition(all 0.4s ease);
+			z-index:1;
+
+
+		}
+		figcaption {
+			position:absolute;
+			display:block;
+			width:125%;
+			left:-12.5%;
+			bottom:0;
+			padding:1em;
+			z-index:100;
+			background-color:rgba($blue, 0.1);
+			@include transform(translate3d(0, 100%, 1000px));
+			@include transition(all 0.5s ease);
+			transition-delay:0.1s;
+			opacity:0;
+			text-align:center;
+		}
+		&.current {
+ 			img {
+				@include transform(translateZ(0) rotateY(0));
+				@include transition(all 0.75s ease);
+				&.zoom {
+					@include transform(translateZ(250px) rotateY(360deg));
+				}
+			}
+			figcaption {
+				@include transform(translate3d(0, 120%, 0));
+				opacity:1.0;
+			}
+		}
+	}
+}
+
+
+
+.works .content h2 {
+	text-align:center;
+}
+
+@include media($bp-small){
+	$vpWidth:140px;
+	$vpHeight:$vpWidth * 0.75;
+	.viewport {
+		width:$vpWidth;
+		height:$vpHeight;
+	}
+	.slides figure {
+		width:$vpWidth;
+	}
+}
