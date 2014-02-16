@@ -11,6 +11,11 @@ window.addEventListener('DOMContentLoaded', init, false);
 
 function init() {
 
+	console.log(navigator.userAgent);
+	console.log(navigator.platform);
+	console.log(navigator.appName);
+	console.log(navigator.appVersion);
+
 	var body = document.getElementsByTagName('body')[0];
 
 	var trigger = document.getElementById('js-trigger');
