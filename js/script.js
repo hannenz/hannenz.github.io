@@ -16,6 +16,15 @@ function init() {
 	console.log(navigator.appName);
 	console.log(navigator.appVersion);
 
+	var engines = [ "AppleWebkit", "Gecko", "Trident", "Presto" ];
+	for (var i = 0 ; i < engines.length ; i++){
+		regex = new RegExp('/' + engine[i] + '\/([A-Za-z0-9]+)/');
+		if (navigator.userAgent.match(regex)){
+			alert ("This is: " + engines[i]);
+		}
+	}
+	if (navigator.userAgent.match(/
+
 	var body = document.getElementsByTagName('body')[0];
 
 	var trigger = document.getElementById('js-trigger');
