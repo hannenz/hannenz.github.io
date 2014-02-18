@@ -11,13 +11,17 @@
 </head>
 <body>
 <form action="http://feedback.homelinux.lan/issues/add" method="post">
+
+	<label for="IssueUserEmail">E-Mail</label>
+	<input type="email" id="IssueUserEmail" name="data[User][email]">
+
 	<label for="IssueTitle">Titel</label>
-	<input name="IssueTitle" />
+	<input id="IssueTitle" name="data[Issue][title]" />
 
 	<br>
 
 	<label for="IssueDescription">Beschreibung</label>
-	<textarea name="IssueDescription"></textarea>
+	<textarea id="IssueDescription" name="data[Issue][description]"></textarea>
 
 	<br>
 
